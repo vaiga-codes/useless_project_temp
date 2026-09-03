@@ -1,1 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keyboard Rage Detector™</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-grid"></div>
+    <div class="scanline"></div>
+
+    <!-- ================= HOME ================= -->
+
+    <main id="home-screen" class="screen active">
+
+        <div class="home-container">
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                KEYBOARD'S OFFICIAL THERAPIST
+            </div>
+
+            <p class="eyebrow">TOTALLY SCIENTIFIC</p>
+
+            <h1>
+                KEYBOARD<br>
+                <span>RAGE</span><br>
+                DETECTOR
+            </h1>
+
+            <p class="subtitle">
+                Because apparently we now need technology
+                to determine whether you're angry.
+            </p>
+
+            <div class="warning-box">
+
+                <span class="warning-icon">⚠</span>
+
+                <div>
+                    <strong>WARNING</strong>
+
+                    <p>
+                        Your typing will be judged.
+                        Your keyboard cannot defend itself.
+                    </p>
+                </div>
+
+            </div>
+
+            <button id="start-btn" class="primary-btn">
+                START RAGE TEST
+                <span>→</span>
+            </button>
+
+            <div class="home-stats">
+
+                <div>
+                    <strong>100%</strong>
+                    <span>SCIENTIFICALLY QUESTIONABLE</span>
+                </div>
+
+                <div>
+                    <strong>0%</strong>
+                    <span>ACTUAL USEFULNESS</span>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <span>UNNECESSARY ANALYSIS</span>
+                </div>
+
+            </div>
+
+            <p class="disclaimer">
+                No keyboards were consulted before, during,
+                or after this experiment.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= TEST ================= -->
+
+    <main id="test-screen" class="screen">
+
+        <div class="test-container">
+
+            <header class="top-bar">
+
+                <div>
+                    <p class="eyebrow">LIVE PSYCHOLOGICAL ANALYSIS</p>
+                    <h2>RAGE TEST</h2>
+                </div>
+
+                <div class="timer-box">
+                    <span>TIME</span>
+                    <strong id="timer">00:00</strong>
+                </div>
+
+            </header>
+
+
+            <!-- Stats -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <span>WPM</span>
+                    <strong id="wpm">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>ACCURACY</span>
+                    <strong id="accuracy">100%</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>BACKSPACES</span>
+                    <strong id="backspaces">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>CAPS ABUSE</span>
+                    <strong id="caps">0%</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Typing -->
+
+            <section class="typing-section">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        <span>01</span>
+                        YOUR TOTALLY RANDOM CHALLENGE
+                    </div>
+
+                    <button id="new-sentence-btn" class="tiny-btn">
+                        🎲 NEW SENTENCE
+                    </button>
+
+                </div>
+
+                <div id="text-display" class="text-display">
+                    Loading challenge...
+                </div>
+
+                <div class="typing-wrapper">
+
+                    <textarea
+                        id="typing-input"
+                        placeholder="Begin your keyboard assault..."
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                    ></textarea>
+
+                    <div id="typing-status" class="typing-status">
+                        Waiting for violence...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Rage -->
+
+            <section class="rage-monitor">
+
+                <div class="rage-header">
+
+                    <div>
+                        <span>RAGE DETECTION</span>
+                        <small id="rage-status">Monitoring...</small>
+                    </div>
+
+                    <strong id="live-rage">0%</strong>
+
+                </div>
+
+                <div class="rage-bar">
+                    <div id="rage-fill"></div>
+                </div>
+
+                <p id="live-message">
+                    Suspiciously calm...
+                </p>
+
+            </section>
+
+
+            <!-- Live commentary -->
+
+            <div class="commentary-box">
+
+                <span class="commentary-icon">▸</span>
+
+                <p id="commentary">
+                    System is observing you.
+                </p>
+
+            </div>
+
+
+            <button id="finish-btn" class="primary-btn finish-btn">
+                I'VE SUFFERED ENOUGH →
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= RESULTS ================= -->
+
+    <main id="result-screen" class="screen">
+
+        <div class="result-container">
+
+            <p class="eyebrow">ANALYSIS COMPLETE</p>
+
+            <h2>YOUR KEYBOARD RAGE LEVEL</h2>
+
+            <div class="rage-score">
+
+                <span id="final-rage">0</span>
+                <small>%</small>
+
+            </div>
+
+            <div id="rage-title" class="rage-title">
+                KEYBOARD MONK
+            </div>
+
+
+            <!-- Diagnosis -->
+
+            <div class="diagnosis-card">
+
+                <div class="section-label">
+                    <span>02</span>
+                    OFFICIAL DIAGNOSIS
+                </div>
+
+                <p id="diagnosis">
+                    You appear suspiciously calm.
+                </p>
+
+            </div>
+
+
+            <!-- Statistics -->
+
+            <div class="final-stats">
+
+                <div>
+                    <span>WPM</span>
+                    <strong id="final-wpm">0</strong>
+                </div>
+
+                <div>
+                    <span>ACCURACY</span>
+                    <strong id="final-accuracy">0%</strong>
+                </div>
+
+                <div>
+                    <span>BACKSPACES</span>
+                    <strong id="final-backspaces">0</strong>
+                </div>
+
+                <div>
+                    <span>CAPS ABUSE</span>
+                    <strong id="final-caps">0%</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Keyboard health -->
+
+            <div class="health-card">
+
+                <div class="health-header">
+
+                    <span>⌨ KEYBOARD HEALTH</span>
+
+                    <strong id="keyboard-health">
+                        100%
+                    </strong>
+
+                </div>
+
+                <div class="health-bar">
+
+                    <div id="health-fill"></div>
+
+                </div>
+
+                <p id="health-message">
+                    Your keyboard has survived another day.
+                </p>
+
+            </div>
+
+
+            <!-- Achievement -->
+
+            <div class="achievement-card">
+
+                <span class="achievement-icon">
+                    🏆
+                </span>
+
+                <div>
+
+                    <span class="achievement-label">
+                        ACHIEVEMENT UNLOCKED
+                    </span>
+
+                    <strong id="achievement">
+                        Keyboard Intern
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Useless report -->
+
+            <div class="useless-report">
+
+                <div>
+                    <span>KEYBOARD'S TRUST IN YOU</span>
+                    <strong id="trust">100%</strong>
+                </div>
+
+                <div>
+                    <span>CHANCES OF YOU TOUCHING GRASS</span>
+                    <strong id="grass">3%</strong>
+                </div>
+
+                <div>
+                    <span>REASON FOR RAGE</span>
+                    <strong id="rage-reason">Unknown</strong>
+                </div>
+
+            </div>
+
+
+            <button id="retry-btn" class="primary-btn">
+                DESTROY ANOTHER KEYBOARD ↻
+            </button>
+
+            <p class="disclaimer">
+                Results are completely fake and therefore
+                extremely trustworthy.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Toast notification -->
+
+    <div id="toast" class="toast">
+        Keyboard abuse detected.
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
