@@ -15,7 +15,7 @@
     --panel-2: #14141c;
 
     --text: #f4f4f6;
-    --muted: #777783;
+    --muted: #9b0b25;
 
     --accent: #9b0b25;
     --accent-bright: #ff1744;
@@ -66,13 +66,13 @@ body {
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,0.025) 1px,
+            rgba(246,229,141,0.12) 1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.025) 1px,
+            rgba(246,229,141,0.12) 1px,
             transparent 1px
         );
 
@@ -148,7 +148,7 @@ body {
 
 .eyebrow {
 
-    color: var(--accent);
+    color: #f6e58d;
 
     font-size: 0.68rem;
 
@@ -163,7 +163,7 @@ body {
 
 .subtitle {
 
-    color: var(--muted);
+    color: #f6e58d;
 
     line-height: 1.7;
 
@@ -176,7 +176,7 @@ body {
 
 .disclaimer {
 
-    color: #4d4d57;
+    color: #fff;
 
     font-size: 0.68rem;
 
@@ -305,11 +305,11 @@ body {
     text-align: left;
 
     background:
-        rgba(255,49,88,0.04);
+        rgba(255, 49, 88, 0.04);
 
     border:
         1px solid
-        rgba(255,49,88,0.2);
+        rgb(253, 253, 253);
 
 }
 
@@ -325,6 +325,7 @@ body {
 
 .warning-box strong {
 
+    color: #fff;
     font-size:
         0.7rem;
 
@@ -335,9 +336,7 @@ body {
 
 .warning-box p {
 
-    color:
-        var(--muted);
-
+    color: #fff;
     font-size:
         0.75rem;
 
@@ -430,7 +429,7 @@ body {
         45px auto 0;
 
     border:
-        1px solid var(--border);
+        1px solid #fff;
 
 }
 
@@ -440,7 +439,7 @@ body {
         18px;
 
     border-right:
-        1px solid var(--border);
+        1px solid #fff;
 
 }
 
@@ -457,7 +456,7 @@ body {
         block;
 
     color:
-        var(--accent);
+        #fff;
 
     font-size:
         1.4rem;
@@ -1548,8 +1547,8 @@ body::before {
     pointer-events: none;
 
     background-image:
-        linear-gradient(rgba(0, 221, 255, 0.771) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 221, 255, 0.77) 1px, transparent 1px);
+        linear-gradient(rgba(0, 221, 255, 0.451) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 221, 255, 0.438) 1px, transparent 1px);
 
     background-size: 45px 45px;
 
@@ -1563,82 +1562,5 @@ body::before {
 
     to {
         background-position: 45px 45px;
-    }
-}
-
-/* Glowing background blobs */
-body::after {
-    content: "";
-    position: fixed;
-    inset: -20%;
-    z-index: -3;
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            circle at 20% 30%,
-            rgba(0, 200, 255, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 80% 70%,
-            rgba(255, 0, 100, 0.10),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 50% 100%,
-            rgba(120, 0, 255, 0.10),
-            transparent 35%
-        );
-
-    filter: blur(40px);
-
-    animation: backgroundPulse 8s ease-in-out infinite alternate;
-}
-
-@keyframes backgroundPulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.7;
-    }
-
-    100% {
-        transform: scale(1.15);
-        opacity: 1;
-    }
-}
-
-/* Floating particles */
-.particle {
-    position: fixed;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #00eaff;
-    box-shadow: 0 0 12px #00eaff;
-
-    pointer-events: none;
-    z-index: -1;
-
-    animation: floatParticle linear infinite;
-}
-
-@keyframes floatParticle {
-    from {
-        transform: translateY(110vh);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(-10vh);
-        opacity: 0;
     }
 }
