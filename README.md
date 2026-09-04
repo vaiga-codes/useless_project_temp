@@ -66,6 +66,10 @@ For Software:
 
 https://vercel.com/vaiga/useless-project-temp-99cr
 
+# Video Journal
+
+https://drive.google.com/file/d/1UWHkjyR5_z1aIZEyTI0-kkwJXle0JA1J/view?usp=drivesdk
+
 For Hardware:
 
 # Schematic & Circuit
