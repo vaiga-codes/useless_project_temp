@@ -64,7 +64,6 @@ For Software:
 
 # Website Link
 
-
 For Hardware:
 
 # Schematic & Circuit
