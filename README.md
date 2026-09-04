@@ -64,6 +64,8 @@ For Software:
 
 # Website Link
 
+https://vercel.com/vaiga/useless-project-temp-99cr
+
 For Hardware:
 
 # Schematic & Circuit
